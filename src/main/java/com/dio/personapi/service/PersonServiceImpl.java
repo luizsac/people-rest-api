@@ -42,6 +42,7 @@ public class PersonServiceImpl implements PersonService {
     public PersonDTO update(Long id, PersonDTO personDTO) throws PersonNotFoundException {
         verifyIfExists(id);
         Person updatedPerson = personMapper.toModel(personDTO);
+        updatedPerson.setId(id);
         Person savedPerson = personRepository.save(updatedPerson);
         return personMapper.toDTO(savedPerson);
     }

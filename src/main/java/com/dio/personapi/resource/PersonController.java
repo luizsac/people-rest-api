@@ -1,7 +1,6 @@
 package com.dio.personapi.resource;
 
 import com.dio.personapi.dto.request.PersonDTO;
-import com.dio.personapi.entity.Person;
 import com.dio.personapi.exception.PersonNotFoundException;
 import com.dio.personapi.service.PersonService;
 import lombok.AllArgsConstructor;
