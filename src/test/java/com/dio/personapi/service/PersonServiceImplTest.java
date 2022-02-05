@@ -83,8 +83,8 @@ public class PersonServiceImplTest {
         assertEquals(expectedPersonDTO, actualPersonDTO);
     }
 
-    @Test
-    void givenPersonId_whenGetById_thenThrowPersonNotFoundException() throws PersonNotFoundException {
+    @Test  // testa indiretamente o método verifyIfExists, cobrindo também os métodos update e delete
+    void givenPersonId_whenGetById_thenThrowPersonNotFoundException() {
         assertThrows(PersonNotFoundException.class, () -> personService.getById(42L));
     }
 
