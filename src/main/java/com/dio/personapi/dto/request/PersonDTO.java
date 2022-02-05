@@ -1,5 +1,6 @@
 package com.dio.personapi.dto.request;
 
+import lombok.Builder;
 import lombok.Data;
 import org.hibernate.validator.constraints.br.CPF;
 
@@ -9,7 +10,7 @@ import javax.validation.constraints.Size;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+@Data @Builder
 public class PersonDTO {
 
     private Long id;
