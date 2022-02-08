@@ -41,9 +41,9 @@ public class PersonServiceImplTest {
 
         expectedSavedPersonDTO.setId(savedPerson.getId());
 
-        when(personMapper.toModel(personDTO)).thenReturn(person);
-        when(personRepository.save(person)).thenReturn(savedPerson);
-        when(personMapper.toDTO(savedPerson)).thenReturn(expectedSavedPersonDTO);
+        when(personMapper.toModel(any(PersonDTO.class))).thenReturn(person);
+        when(personRepository.save(any(Person.class))).thenReturn(savedPerson);
+        when(personMapper.toDTO(any(Person.class))).thenReturn(expectedSavedPersonDTO);
 
         PersonDTO actualSavedPersonDTO = personService.create(personDTO);
 
@@ -75,8 +75,8 @@ public class PersonServiceImplTest {
 
         expectedPersonDTO.setId(person.getId());
 
-        when(personRepository.findById(person.getId())).thenReturn(Optional.of(person));
-        when(personMapper.toDTO(person)).thenReturn(expectedPersonDTO);
+        when(personRepository.findById(any(Long.class))).thenReturn(Optional.of(person));
+        when(personMapper.toDTO(any(Person.class))).thenReturn(expectedPersonDTO);
 
         PersonDTO actualPersonDTO = personService.getById(person.getId());
 
@@ -99,10 +99,10 @@ public class PersonServiceImplTest {
         updatedPerson.setId(null);
         expectedPersonDTO.setId(savedPerson.getId());
 
-        when(personRepository.findById(person.getId())).thenReturn(Optional.of(person));
-        when(personMapper.toModel(updatedPersonDTO)).thenReturn(updatedPerson);
-        when(personRepository.save(updatedPerson)).thenReturn(savedPerson);
-        when(personMapper.toDTO(savedPerson)).thenReturn(expectedPersonDTO);
+        when(personRepository.findById(any(Long.class))).thenReturn(Optional.of(person));
+        when(personMapper.toModel(any(PersonDTO.class))).thenReturn(updatedPerson);
+        when(personRepository.save(any(Person.class))).thenReturn(savedPerson);
+        when(personMapper.toDTO(any(Person.class))).thenReturn(expectedPersonDTO);
 
         PersonDTO actualPersonDTO = personService.update(person.getId(), updatedPersonDTO);
 
@@ -116,8 +116,8 @@ public class PersonServiceImplTest {
 
         expectedPersonDTO.setId(person.getId());
 
-        when(personRepository.findById(person.getId())).thenReturn(Optional.of(person));
-        when(personMapper.toDTO(person)).thenReturn(expectedPersonDTO);
+        when(personRepository.findById(any(Long.class))).thenReturn(Optional.of(person));
+        when(personMapper.toDTO(any(Person.class))).thenReturn(expectedPersonDTO);
 
         PersonDTO actualPersonDTO = personService.delete(person.getId());
 
