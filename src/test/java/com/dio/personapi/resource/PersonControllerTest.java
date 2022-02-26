@@ -1,12 +1,8 @@
 package com.dio.personapi.resource;
 
 import com.dio.personapi.dto.request.PersonDTO;
-import com.dio.personapi.dto.request.PhoneDTO;
-import com.dio.personapi.exception.PersonNotFoundException;
 import com.dio.personapi.service.PersonService;
-import com.dio.personapi.type.PhoneType;
 import com.dio.personapi.utils.PersonUtils;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,8 +17,8 @@ import java.util.List;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @SpringJUnitConfig
 @WebMvcTest(PersonController.class)
