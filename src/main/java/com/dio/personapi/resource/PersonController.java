@@ -21,7 +21,6 @@ import java.util.List;
 @Api(value = "Registers people")
 public class PersonController {
 
-    private final String PATH = "/api/v1/people";
     private final PersonService personService;
 
     @PostMapping
