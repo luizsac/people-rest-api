@@ -9,10 +9,6 @@
   - [Recuperar pessoa pelo id](#recuperar-pessoa-pelo-id)
   - [Atualizar pessoa](#atualizar-pessoa)
   - [Deletar pessoa](#deletar-pessoa)
-
-<!--#
-INDENT=&nbsp;&nbsp;&nbsp;&nbsp;
-$-->
   
 ## Sobre
 ## Funcionalidades
@@ -20,20 +16,47 @@ $-->
 ### Request
 `POST /api/v1/people`
 
-{<br>
-{{ INDENT }}"firstName": "Foo",<br>
-&nbsp;&nbsp;&nbsp;&nbsp;"lastName": "Bar",<br>
-&nbsp;&nbsp;&nbsp;&nbsp;"cpf": "78946699035",<br>
-&nbsp;&nbsp;&nbsp;&nbsp;"birthDate": "12-12-1972",<br>
-&nbsp;&nbsp;&nbsp;&nbsp;"phones": [<br>
-    {<br>
-      "number": "5565433456568",<br>
-      "type": "COMMERCIAL"<br>
-    }<br>
-  ]<br>
+#### Request body
+<pre>
+{
+  "firstName": "Foo",
+  "lastName": "Bar",
+  "cpf": "78946699035",
+  "birthDate": "13-12-1912",  
+  "phones": [
+    {
+      "number": "5587864567786",
+      "type": "COMMERCIAL"
+    }
+  ]
 }
+</pre>
+
+Obs.: O CPF deve ser válido. Acesse um gerador clicando [aqui](https://www.4devs.com.br/gerador_de_cpf).
 
 ### Response
+HTTP/1.1 201 Created
+Date: Mon, 28 Feb 2022 20:50:05 GMT
+Status: 201 Created
+Content-Type: application/json
+
+#### Response body
+<pre>
+{
+    "id": 1,
+    "firstName": "Foo",
+    "lastName": "Bar",
+    "cpf": "78946699035",
+    "birthDate": "1912-12-13",
+    "phones": [
+        {
+            "id": 1,
+            "type": "COMMERCIAL",
+            "number": "5587864567786"
+        }
+    ]
+}
+</pre>
 
 
 ## Recuperar lista de pessoas
