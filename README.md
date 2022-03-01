@@ -12,11 +12,10 @@
   
 ## Sobre
 ## Funcionalidades
-## Cadastrar pessoa
-### Request
+### Cadastrar pessoa
+#### Request
 `POST /api/v1/people`
 
-#### Request body
 <pre>
 {
   "firstName": "Foo",
@@ -35,12 +34,11 @@
 Obs.: O CPF deve ser válido. Acesse um gerador clicando [aqui](https://www.4devs.com.br/gerador_de_cpf).
 
 ### Response
-HTTP/1.1 201 Created
-Date: Mon, 28 Feb 2022 20:50:05 GMT
-Status: 201 Created
-Content-Type: application/json
+    HTTP/1.1 201 Created
+    Date: Mon, 28 Feb 2022 20:50:05 GMT
+    Status: 201 Created
+    Content-Type: application/json
 
-#### Response body
 <pre>
 {
     "id": 1,
@@ -61,18 +59,139 @@ Content-Type: application/json
 
 ## Recuperar lista de pessoas
 ### Request
-`POST /thing/`
+`GET /api/v1/people`
 
 ### Response
+    HTTP/1.1 200 OK
+    Date: Mon, 28 Feb 2022 20:50:05 GMT
+    Status: 200 OK
+    Content-Type: application/json
+
+<pre>
+[
+    {
+        "id": 1,
+        "firstName": "Bar",
+        "lastName": "Foo",
+        "cpf": "02788745095",
+        "birthDate": "1987-04-23",
+        "phones": [
+            {
+                "id": 1,
+                "type": "MOBILE",
+                "number": "5548997685748"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "firstName": "Foo",
+        "lastName": "Bar",
+        "cpf": "78946699035",
+        "birthDate": "1912-12-13",
+        "phones": [
+            {
+                "id": 2,
+                "type": "COMMERCIAL",
+                "number": "5587864567786"
+            }
+        ]
+    }
+]
+</pre>
 
 ## Recuperar pessoa pelo id
 ### Request
-`POST /thing/`
+`GET /api/v1/people/id`
+
+### Response
+    HTTP/1.1 200 OK
+    Date: Mon, 28 Feb 2022 20:50:05 GMT
+    Status: 200 OK
+    Content-Type: application/json
+
+<pre>
+    {
+        "id": 2,
+        "firstName": "Foo",
+        "lastName": "Bar",
+        "cpf": "78946699035",
+        "birthDate": "1912-12-13",
+        "phones": [
+            {
+                "id": 2,
+                "type": "COMMERCIAL",
+                "number": "5587864567786"
+            }
+        ]
+    }
+</pre>
 
 ## Atualizar pessoa
 ### Request
-`POST /thing/`
+`PUT /api/v1/people/id`
+
+<pre>
+{
+  "firstName": "Foo",
+  "lastName": "Bar",
+  "cpf": "78946699035",
+  "birthDate": "30-04-1945",  
+  "phones": [
+    {
+      "number": "5543934328786",
+      "type": "COMMERCIAL"
+    }
+  ]
+}
+</pre>
+
+### Response
+    HTTP/1.1 200 OK
+    Date: Mon, 28 Feb 2022 20:50:05 GMT
+    Status: 200 OK
+    Content-Type: application/json
+
+<pre>
+{
+    "id": 2,
+    "firstName": "Foo",
+    "lastName": "Bar",
+    "cpf": "78946699035",
+    "birthDate": "1945-04-30",
+    "phones": [
+        {
+            "id": 3,
+            "type": "COMMERCIAL",
+            "number": "5543934328786"
+        }
+    ]
+}
+</pre>
 
 ## Deletar pessoa
 ### Request
-`POST /thing/`
+`DELETE /api/v1/people/id`
+
+### Response
+    HTTP/1.1 200 OK
+    Date: Mon, 28 Feb 2022 20:50:05 GMT
+    Status: 200 OK
+    Content-Type: application/json
+
+<pre>
+{
+    "id": 2,
+    "firstName": "Foo",
+    "lastName": "Bar",
+    "cpf": "78946699035",
+    "birthDate": "1945-04-30",
+    "phones": [
+        {
+            "id": 3,
+            "type": "COMMERCIAL",
+            "number": "5543934328786"
+        }
+    ]
+}
+</pre>
