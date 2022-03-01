@@ -2,15 +2,45 @@
 
 <p align="center">REST API para cadastro de pessoas</p>
 
-- [Sobre](#sobre)
+Acesse a API rodando no Heroku [aqui](https://luizsac-people-api.herokuapp.com/api/v1/people).
+
+- [Tecnologias](#tecnologias)
+- [Como usar](#como-usar)
+  - [Pré-requisitos](#pr-requisitos)
+  - [Como executar](#como-executar)
 - [Funcionalidades](#funcionalidades)
   - [Cadastrar pessoa](#cadastrar-pessoa)
   - [Recuperar lista de pessoas](#recuperar-lista-de-pessoas)
   - [Recuperar pessoa pelo id](#recuperar-pessoa-pelo-id)
   - [Atualizar pessoa](#atualizar-pessoa)
   - [Deletar pessoa](#deletar-pessoa)
+- [Licença](#licença)
+- [Autor](#autor)
   
-## Sobre
+## Tecnologias
+- [Java](https://openjdk.java.net/)
+- [Spring](https://spring.io/) (Web, Data Jpa, Validation)
+- [Gradle](https://gradle.org/)
+- [Swagger](https://swagger.io/)
+- [Mapstruct](https://mapstruct.org/)
+- [Project Lombok](https://projectlombok.org/)
+- [H2](https://www.h2database.com/html/main.html)
+- [PostgreSQL](https://www.postgresql.org/) (no Heroku)
+- [JUnit](https://junit.org/junit5/)
+
+## Como usar
+### Pré-requisitos
+- [Git](https://git-scm.com/downloads)
+- [Java Runtime Environment](https://www.java.com/pt-BR/download/)
+
+### Como executar
+
+Clone o repositório: `git clone https://github.com/luizsac/people-rest-api.git`
+
+Entre na pasta do projeto: `cd people-rest-api`
+
+Execute a aplicação: `.\gradlew bootRun` no Windows ou `./gradlew bootRun` no Linux/Mac
+
 ## Funcionalidades
 ### Cadastrar pessoa
 #### Request
@@ -195,3 +225,10 @@ Obs.: O CPF deve ser válido. Acesse um gerador clicando [aqui](https://www.4dev
     ]
 }
 </pre>
+
+## Licença
+Essa API está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/luizsac/people-rest-api/blob/main/LICENSE) para mais informações.
+
+## Autor
+[![Linkedin Badge](https://img.shields.io/badge/Luiz_Henrique_Salgado_Andrade_Cardoso-0a66c2?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/luizsac/)](https://www.linkedin.com/in/luizsac/)
+[![Linkedin Badge](https://img.shields.io/badge/luizhenriquesalgado@outlook.com.br-0073c6?style=flat-square&logo=Microsoft-Outlook&logoColor=white&link=mailto:luizhenriquesalgado@outlook.com.br)](mailto:luizhenriquesalgado@outlook.com.br)
