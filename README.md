@@ -4,6 +4,7 @@
 
 Acesse a API rodando no Heroku [aqui](https://luizsac-people-api.herokuapp.com/api/v1/people).
 
+- [Sobre](#sobre)
 - [Tecnologias](#tecnologias)
 - [Como usar](#como-usar)
   - [Pré-requisitos](#pré-requisitos)
