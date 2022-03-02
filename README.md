@@ -6,7 +6,7 @@ Acesse a API rodando no Heroku [aqui](https://luizsac-people-api.herokuapp.com/a
 
 - [Tecnologias](#tecnologias)
 - [Como usar](#como-usar)
-  - [Pré-requisitos](#pr-requisitos)
+  - [Pré-requisitos](#pré-requisitos)
   - [Como executar](#como-executar)
 - [Funcionalidades](#funcionalidades)
   - [Cadastrar pessoa](#cadastrar-pessoa)
@@ -16,20 +16,26 @@ Acesse a API rodando no Heroku [aqui](https://luizsac-people-api.herokuapp.com/a
   - [Deletar pessoa](#deletar-pessoa)
 - [Licença](#licença)
 - [Autor](#autor)
+
+## Sobre
+Esta é uma API construída para o projeto "Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring
+Boot" da plataforma DIO. É uma aplicação Spring Boot que utiliza os módulos Web, Data JPA e Validation. Lombok foi
+incluído para a geração de código boilerplate e Mapstruct, para conversão entre models e DTOs. A versão local da
+aplicação usa o H2 como banco em memória e a versão do Heroku tem o PostgreSQL como banco de dados. Swagger foi
+utilizado para documentar a aplicação e os testes unitários foram implementados com a bibioteca de testes do Spring Boot.
   
 ## Tecnologias
 - [Java](https://openjdk.java.net/)
-- [Spring](https://spring.io/) (Web, Data Jpa, Validation)
+- [Spring Boot](https://spring.io/) (Web, Data JPA, Validation, Test)
 - [Gradle](https://gradle.org/)
 - [Swagger](https://swagger.io/)
 - [Mapstruct](https://mapstruct.org/)
 - [Project Lombok](https://projectlombok.org/)
 - [H2](https://www.h2database.com/html/main.html)
 - [PostgreSQL](https://www.postgresql.org/) (no Heroku)
-- [JUnit](https://junit.org/junit5/)
 
 ## Como usar
-### Pré-requisitos
+### Pré requisitos
 - [Git](https://git-scm.com/downloads)
 - [Java Runtime Environment](https://www.java.com/pt-BR/download/)
 
