@@ -7,7 +7,7 @@ Acesse a API rodando no Heroku [aqui](https://luizsac-people-api.herokuapp.com/a
 - [Sobre](#sobre)
 - [Tecnologias](#tecnologias)
 - [Como usar](#como-usar)
-  - [Pré-requisitos](#pré-requisitos)
+  - [Pré-requisitos](#pré-requisitos)  <!-- funciona no github -->
   - [Como executar](#como-executar)
 - [Funcionalidades](#funcionalidades)
   - [Cadastrar pessoa](#cadastrar-pessoa)
@@ -36,7 +36,7 @@ utilizado para documentar a aplicação e os testes unitários foram implementad
 - [PostgreSQL](https://www.postgresql.org/) (no Heroku)
 
 ## Como usar
-### Pré requisitos
+### Pré-requisitos
 - [Git](https://git-scm.com/downloads)
 - [Java Runtime Environment](https://www.java.com/pt-BR/download/)
 
