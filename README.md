@@ -22,7 +22,7 @@ Acesse a API rodando no Heroku [aqui](https://luizsac-people-api.herokuapp.com/a
 Esta é uma API construída para o projeto "Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring
 Boot" da plataforma DIO. É uma aplicação Spring Boot que utiliza os módulos Web, Data JPA e Validation. Lombok foi
 incluído para a geração de código boilerplate e Mapstruct, para conversão entre models e DTOs. A versão local da
-aplicação usa o MySQL localmente e a versão do Heroku tem o PostgreSQL como banco de dados. Swagger foi
+aplicação usa o MySQL e a versão do Heroku tem o PostgreSQL como banco de dados. Swagger foi
 utilizado para documentar a aplicação e os testes unitários foram implementados com a bibioteca de testes do Spring Boot.
   
 ## Tecnologias
