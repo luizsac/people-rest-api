@@ -22,7 +22,7 @@ Acesse a API rodando no Heroku [aqui](https://luizsac-people-api.herokuapp.com/a
 Esta é uma API construída para o projeto "Desenvolvendo um sistema de gerenciamento de pessoas em API REST com Spring
 Boot" da plataforma DIO. É uma aplicação Spring Boot que utiliza os módulos Web, Data JPA e Validation. Lombok foi
 incluído para a geração de código boilerplate e Mapstruct, para conversão entre models e DTOs. A versão local da
-aplicação usa o H2 como banco em memória e a versão do Heroku tem o PostgreSQL como banco de dados. Swagger foi
+aplicação usa o MySQL localmente e a versão do Heroku tem o PostgreSQL como banco de dados. Swagger foi
 utilizado para documentar a aplicação e os testes unitários foram implementados com a bibioteca de testes do Spring Boot.
   
 ## Tecnologias
@@ -32,19 +32,22 @@ utilizado para documentar a aplicação e os testes unitários foram implementad
 - [Swagger](https://swagger.io/)
 - [Mapstruct](https://mapstruct.org/)
 - [Project Lombok](https://projectlombok.org/)
-- [H2](https://www.h2database.com/html/main.html)
+- [MySQL](https://dev.mysql.com/downloads/mysql/)
 - [PostgreSQL](https://www.postgresql.org/) (no Heroku)
 
 ## Como usar
 ### Pré-requisitos
 - [Git](https://git-scm.com/downloads)
 - [Java Runtime Environment](https://www.java.com/pt-BR/download/)
+- [Docker](https://www.docker.com/)
 
 ### Como executar
 
 Clone o repositório: `git clone https://github.com/luizsac/people-rest-api.git`
 
 Entre na pasta do projeto: `cd people-rest-api`
+
+Suba o container do banco de dados no docker: `docker run --name mysql_container -p 3306:3306 -e MYSQL_ROOT_PASSWORD=tatakae -d mysql:latest`
 
 Execute a aplicação: `.\gradlew bootRun` no Windows ou `./gradlew bootRun` no Linux/Mac
 
