@@ -50,6 +50,7 @@ Entre na pasta do projeto: `cd people-rest-api`
 Suba o container do banco de dados no docker: `docker run --name mysql_container -p 3306:3306 -e MYSQL_ROOT_PASSWORD=tatakae -d mysql:latest`
 
 Execute a aplicação: `.\gradlew bootRun` no Windows ou `./gradlew bootRun` no Linux/Mac
+> **_Obs.:_**  No Linux, talvez seja necessário executar o comando `chmod +x gradlew` antes de executar a aplicação
 
 ## Funcionalidades
 ### Cadastrar pessoa
