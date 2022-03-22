@@ -38,7 +38,7 @@ utilizado para documentar a aplicação e os testes unitários foram implementad
 ## Como usar
 ### Pré-requisitos
 - [Git](https://git-scm.com/downloads)
-- [Java Runtime Environment](https://www.java.com/pt-BR/download/)
+- [Java Development Kit](https://jdk.java.net/17/)
 - [Docker](https://www.docker.com/)
 
 ### Como executar
